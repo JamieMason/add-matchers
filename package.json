@@ -1,0 +1,51 @@
+{
+  "name": "add-matchers",
+  "description": "Write useful test matchers compatible with Jest and Jasmine.",
+  "version": "0.1.0",
+  "author": "Jamie Mason (https://github.com/JamieMason)",
+  "bugs": {
+    "url": "https://github.com/JamieMason/add-matchers/issues"
+  },
+  "devDependencies": {
+    "browserify": "13.0.0",
+    "jasmine": "2.5.3",
+    "nodemon": "1.11.0",
+    "xo": "0.17.1"
+  },
+  "files": [
+    "dist/",
+    "index.js",
+    "src/"
+  ],
+  "homepage": "https://github.com/JamieMason/add-matchers",
+  "keywords": [
+    "BDD",
+    "TDD",
+    "jasmine",
+    "testing"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JamieMason/add-matchers.git"
+  },
+  "scripts": {
+    "build": "browserify index.js --standalone addMatchers --outfile dist/add-matchers.js",
+    "lint": "xo --fix",
+    "prepublish": "npm run build",
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "watch": "nodemon --quiet --watch src/ --watch index.js ./node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=jasmine.json"
+  },
+  "xo": {
+    "envs": [
+      "jasmine",
+      "node"
+    ],
+    "rules": {
+      "max-nested-callbacks": 0
+    },
+    "esnext": false,
+    "space": 2
+  }
+}
