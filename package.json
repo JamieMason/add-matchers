@@ -33,6 +33,7 @@
   "scripts": {
     "build": "browserify index.js --standalone addMatchers --outfile dist/add-matchers.js",
     "lint": "xo --fix",
+    "prebuild": "mkdir -p dist",
     "prepublish": "npm run build",
     "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "watch": "nodemon --quiet --watch src/ --watch index.js ./node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=jasmine.json"
