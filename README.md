@@ -23,7 +23,7 @@ Include this library after your test framework but before your tests, and regist
 
 ## API
 
-The argument passed to `expect` is always the last argument passed to your Matcher, with any other arguments appearing before it in the order they were supplied. This means that, in the case of `expect(recieved).toBeAwesome(arg1, arg2, arg3)`, your function will be called with `fn(arg1, arg2, arg3, recieved)`.
+The argument passed to `expect` is always the last argument passed to your Matcher, with any other arguments appearing before it in the order they were supplied. This means that, in the case of `expect(received).toBeAwesome(arg1, arg2, arg3)`, your function will be called with `fn(arg1, arg2, arg3, received)`.
 
 Arguments are ordered in this way to support [partial application](http://ejohn.org/blog/partial-functions-in-javascript/) and increase re-use of matchers.
 
