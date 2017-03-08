@@ -1,3 +1,6 @@
+// modules
+var addAsymmetricMatchers = require('./addAsymmetricMatchers');
+
 // public
 module.exports = createRegister;
 
@@ -15,12 +18,16 @@ function createRegister(frameworks, globals) {
     throw new Error('jasmine-expect cannot find jest, jasmine v2.x, or jasmine v1.x');
   }
 
-  return function (matchersByName) {
+  addMatchers.asymmetric = addAsymmetricMatchers;
+
+  return addMatchers;
+
+  function addMatchers(matchersByName) {
     for (var name in matchersByName) {
       var matcherFunction = matchersByName[name];
       var numberOfArgs = matcherFunction.length;
       var adapter = adaptersByNumberOfArgs[numberOfArgs];
       adapter(name, matcherFunction);
     }
-  };
+  }
 }

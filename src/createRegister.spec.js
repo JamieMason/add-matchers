@@ -20,6 +20,10 @@ describe('createRegister', () => {
     it('should convert matchers to work with jest', () => {
       expect(this.frameworks.jest.getAdapters).toHaveBeenCalledWith(this.globals);
     });
+    it('should expose the correct public API', () => {
+      expect(typeof this.addMatchers).toEqual('function');
+      expect(typeof this.addMatchers.asymmetric).toEqual('function');
+    });
   });
 
   describe('when jasmine 2.x.x is installed', () => {
@@ -34,6 +38,10 @@ describe('createRegister', () => {
     it('should convert matchers to work with jasmine 2.x.x', () => {
       expect(this.frameworks.jasmineV2.getAdapters).toHaveBeenCalledWith(this.globals);
     });
+    it('should expose the correct public API', () => {
+      expect(typeof this.addMatchers).toEqual('function');
+      expect(typeof this.addMatchers.asymmetric).toEqual('function');
+    });
   });
 
   describe('when jasmine 1.x.x is installed', () => {
@@ -45,6 +53,10 @@ describe('createRegister', () => {
     });
     it('should convert matchers to work with jasmine 1.x.x', () => {
       expect(this.frameworks.jasmineV1.getAdapters).toHaveBeenCalledWith(this.globals);
+    });
+    it('should expose the correct public API', () => {
+      expect(typeof this.addMatchers).toEqual('function');
+      expect(typeof this.addMatchers.asymmetric).toEqual('function');
     });
   });
 
