@@ -1,5 +1,5 @@
-var matcherFactory = require('./matcherFactory');
-var memberMatcherFactory = require('./memberMatcherFactory');
+var matcherFactory = require('./matcher-factory');
+var memberMatcherFactory = require('./member-matcher-factory');
 
 module.exports = {
   getAdapters: function (globals) {

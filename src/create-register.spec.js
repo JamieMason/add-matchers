@@ -1,6 +1,6 @@
 describe('createRegister', () => {
   beforeEach(() => {
-    this.createRegister = require('./createRegister');
+    this.createRegister = require('./create-register');
     this.frameworks = {
       jasmineV1: createMockFramework('jasmine 1.x.x'),
       jasmineV2: createMockFramework('jasmine 2.x.x'),

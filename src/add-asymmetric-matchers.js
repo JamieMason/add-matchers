@@ -3,6 +3,7 @@ module.exports = addAsymmetricMatchers;
 
 // implementation
 function addAsymmetricMatchers(matchersByName) {
+  /* eslint guard-for-in: 0 */
   global.any = global.any || {};
   for (var name in matchersByName) {
     addAsymmetricMatcher(name, matchersByName[name]);

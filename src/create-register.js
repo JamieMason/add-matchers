@@ -1,5 +1,5 @@
 // modules
-var addAsymmetricMatchers = require('./addAsymmetricMatchers');
+var addAsymmetricMatchers = require('./add-asymmetric-matchers');
 
 // public
 module.exports = createRegister;
@@ -23,6 +23,7 @@ function createRegister(frameworks, globals) {
   return addMatchers;
 
   function addMatchers(matchersByName) {
+    /* eslint guard-for-in: 0 */
     for (var name in matchersByName) {
       var matcherFunction = matchersByName[name];
       var numberOfArgs = matcherFunction.length;
