@@ -1,7 +1,3 @@
 {
-  "spec_dir": "src",
-  "spec_files": ["./**/*.spec.js"],
-  "helpers": [],
-  "stopSpecOnExpectationFailure": false,
-  "random": true
+  "spec_files": ["./test/e2e.spec.js"]
 }
