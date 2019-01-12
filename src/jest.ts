@@ -13,7 +13,9 @@ export const getJestAdapter = (scope: { expect: jest.Expect }) => {
 
   const createToBeMatcher: JestMatcherAdapter = (name, matcher) => {
     return function(received: any, ...args: any[]): jest.CustomMatcherResult {
-      const pass = matcher(...args, received);
+      const arity = matcher.length - 1;
+      const realArgs = args.slice(0, arity);
+      const pass = matcher(...realArgs, received);
       const infix = pass ? ' not ' : ' ';
       const longName = getLongName(name);
       const formattedReceived = this.utils.printReceived(received);
@@ -27,7 +29,9 @@ export const getJestAdapter = (scope: { expect: jest.Expect }) => {
 
   const createToHaveMatcher: JestMatcherAdapter = (name, matcher) => {
     return function(received: any, key: string, ...args: any[]) {
-      const pass = matcher(key, ...args, received);
+      const arity = matcher.length - 2;
+      const realArgs = args.slice(0, arity);
+      const pass = matcher(key, ...realArgs, received);
       const infix = pass ? ' not ' : ' ';
       const longName = getLongName(name);
       const formattedReceived = this.utils.printReceived(received);

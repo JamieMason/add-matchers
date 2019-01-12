@@ -18,4 +18,11 @@ describe('add-matchers', () => {
     expect(2).toBeBetween(1, 3);
     expect({ prop: 2 }).toHaveBetween('prop', 1, 3);
   });
+
+  it('should handle optional messages passed to custom matchers', () => {
+    expect('foo').toBeFoo('some message');
+    expect({ key: 'foo' }).toHaveFoo('key', 'some message');
+    expect(2).toBeBetween(1, 3, 'some message');
+    expect({ prop: 2 }).toHaveBetween('prop', 1, 3, 'some message');
+  });
 });

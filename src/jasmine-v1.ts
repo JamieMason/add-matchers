@@ -20,7 +20,9 @@ const adapter = (
   matcher: CustomMatcher
 ): JasmineV1CustomMatcher =>
   function(...args) {
-    return matcher(...args, this.actual);
+    const arity = matcher.length - 1;
+    const realArgs = args.slice(0, arity);
+    return matcher(...realArgs, this.actual);
   };
 
 export const getJasmineV1Adapter = (scope: jasmine.Env) => {

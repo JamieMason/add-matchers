@@ -17,7 +17,9 @@ export const getJasmineV2Adapter = (scope: {
     return (util) => {
       return {
         compare(actual: any, ...args: any[]) {
-          const passes = matcher(...args, actual);
+          const arity = matcher.length - 1;
+          const realArgs = args.slice(0, arity);
+          const passes = matcher(...realArgs, actual);
           return {
             message: util.buildFailureMessage(name, passes, actual, ...args),
             pass: passes
@@ -34,7 +36,9 @@ export const getJasmineV2Adapter = (scope: {
     return (util) => {
       return {
         compare(actual: any, key: string, ...args: any[]) {
-          const passes = matcher(key, ...args, actual);
+          const arity = matcher.length - 2;
+          const realArgs = args.slice(0, arity);
+          const passes = matcher(key, ...realArgs, actual);
           const message = util
             .buildFailureMessage(name, passes, actual, ...args)
             .replace('Expected', `Expected member "${key}" of`)
