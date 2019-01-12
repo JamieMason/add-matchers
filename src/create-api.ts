@@ -13,15 +13,22 @@ const createAdapter = (scope: any) => {
   return null;
 };
 
+const forEachMatcher = (
+  matchersByName: MatchersByName,
+  fn: (name: string, matcher: any) => any
+) => {
+  for (const name in matchersByName) {
+    if (matchersByName.hasOwnProperty(name) && name.charAt(0) !== '_') {
+      fn(name, matchersByName[name]);
+    }
+  }
+};
+
 export const createApi = (scope: any) => {
   const adapter = createAdapter(scope);
 
   const addMatchers = (matchersByName: MatchersByName) => {
-    for (const name in matchersByName) {
-      if (matchersByName.hasOwnProperty(name)) {
-        adapter(name, matchersByName[name]);
-      }
-    }
+    forEachMatcher(matchersByName, adapter);
   };
 
   const addAsymmetricMatcher = (name: string, matcher: CustomMatcher) => {
@@ -34,11 +41,7 @@ export const createApi = (scope: any) => {
 
   const addAsymmetricMatchers = (matchersByName: MatchersByName) => {
     scope.any = {};
-    for (const name in matchersByName) {
-      if (matchersByName.hasOwnProperty(name)) {
-        addAsymmetricMatcher(name, matchersByName[name]);
-      }
-    }
+    forEachMatcher(matchersByName, addAsymmetricMatcher);
   };
 
   addMatchers.asymmetric = addAsymmetricMatchers;
