@@ -1,3 +1,10 @@
+## [0.6.2](https://github.com/JamieMason/add-matchers/compare/0.6.1...0.6.2) (2019-01-12)
+
+### Bug Fixes
+
+- **matchers:** handle optional messages correctly
+  ([a439683](https://github.com/JamieMason/add-matchers/commit/a439683))
+
 ## [0.6.1](https://github.com/JamieMason/add-matchers/compare/0.6.0...0.6.1) (2019-01-12)
 
 ### Bug Fixes
