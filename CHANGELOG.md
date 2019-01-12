@@ -1,3 +1,10 @@
+## [0.6.1](https://github.com/JamieMason/add-matchers/compare/0.6.0...0.6.1) (2019-01-12)
+
+### Bug Fixes
+
+- **core:** ignore \_\_esModule property added by webpack
+  ([1c82983](https://github.com/JamieMason/add-matchers/commit/1c82983))
+
 # [0.6.0](https://github.com/JamieMason/add-matchers/compare/0.5.0...0.6.0) (2018-12-22)
 
 ### Features

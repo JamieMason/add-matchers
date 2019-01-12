@@ -1,7 +1,7 @@
 {
   "name": "add-matchers",
   "description": "Write useful test matchers compatible with Jest and Jasmine.",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "author": "Jamie Mason (https://github.com/JamieMason)",
   "bugs": "https://github.com/JamieMason/add-matchers/issues",
   "devDependencies": {
