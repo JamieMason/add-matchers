@@ -34,7 +34,7 @@
   "repository": "JamieMason/add-matchers.git",
   "scripts": {
     "build": "tsc --project .",
-    "format": "prettier --write '**/*.md' './src/**/*.ts' './test/**/*.js'",
+    "format": "prettier --write './src/**/*.ts' './test/**/*.js'",
     "lint": "tslint --fix --project ./tsconfig.json",
     "prebuild": "rimraf ./dist",
     "prelint": "npm run format",
