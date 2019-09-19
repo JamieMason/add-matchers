@@ -9,7 +9,7 @@
 -   [🌩 Installation](#-installation)
 -   [📝 API](#-api)
 -   [➕ Writing Matchers](#-writing-matchers)
--   [🙋🏽‍♀️ Getting Help](#♀️-getting-help)
+-   [🙋🏽‍♂️ Getting Help](#♂️-getting-help)
 -   [👀 Other Projects](#-other-projects)
 -   [🤓 Author](#-author)
 
@@ -120,7 +120,7 @@ addMatchers({
 
 For more examples, see [Jasmine Matchers](https://github.com/JamieMason/Jasmine-Matchers/tree/master/src) which is built using this library.
 
-## 🙋🏽‍♀️ Getting Help
+## 🙋🏽‍♂️ Getting Help
 
 Get help with issues by creating a [Bug Report] or discuss ideas by opening a [Feature Request].
 
@@ -135,15 +135,9 @@ If you find my Open Source projects useful, please share them ❤️
 -   [**eslint-formatter-git-log**](https://github.com/JamieMason/eslint-formatter-git-log)<br>ESLint Formatter featuring Git Author, Date, and Hash
 -   [**eslint-plugin-move-files**](https://github.com/JamieMason/eslint-plugin-move-files)<br>Move and rename files while keeping imports up to date
 -   [**eslint-plugin-prefer-arrow-functions**](https://github.com/JamieMason/eslint-plugin-prefer-arrow-functions)<br>Convert functions to arrow functions
--   [**get-time-between**](https://github.com/JamieMason/get-time-between#readme)<br>Measure the amount of time during work hours between two dates
--   [**image-optimisation-tools-comparison**](https://github.com/JamieMason/image-optimisation-tools-comparison)<br>A benchmarking suite for popular image optimisation tools.
 -   [**ImageOptim-CLI**](https://github.com/JamieMason/ImageOptim-CLI)<br>Automates ImageOptim, ImageAlpha, and JPEGmini for Mac to make batch optimisation of images part of your automated build process.
--   [**is-office-hours**](https://github.com/JamieMason/is-office-hours#readme)<br>Determine whether a given date is within office hours
 -   [**Jasmine-Matchers**](https://github.com/JamieMason/Jasmine-Matchers)<br>Write Beautiful Specs with Custom Matchers
--   [**jest-fail-on-console-reporter**](https://github.com/JamieMason/jest-fail-on-console-reporter#readme)<br>Disallow untested console output produced during tests
 -   [**karma-benchmark**](https://github.com/JamieMason/karma-benchmark)<br>Run Benchmark.js over multiple Browsers, with CI compatible output
--   [**karma-jasmine-matchers**](https://github.com/JamieMason/karma-jasmine-matchers)<br>A Karma plugin - Additional matchers for the Jasmine BDD JavaScript testing library.
--   [**logservable**](https://github.com/JamieMason/logservable)<br>git log as an observable stream of JSON objects
 -   [**self-help**](https://github.com/JamieMason/self-help#readme)<br>Interactive Q&A Guides for Web and the Command Line
 -   [**syncpack**](https://github.com/JamieMason/syncpack#readme)<br>Manage multiple package.json files, such as in Lerna Monorepos and Yarn Workspaces
 
