@@ -15,7 +15,7 @@ const createAdapter = (scope: any) => {
 
 const forEachMatcher = (
   matchersByName: MatchersByName,
-  fn: (name: string, matcher: any) => any
+  fn: (name: string, matcher: any) => any,
 ) => {
   for (const name in matchersByName) {
     if (matchersByName.hasOwnProperty(name) && name.charAt(0) !== '_') {
@@ -35,7 +35,7 @@ export const createApi = (scope: any) => {
     scope.any[name] = (...args: any[]) => ({
       asymmetricMatch(actual: any) {
         return matcher.apply(this, [...args, actual]);
-      }
+      },
     });
   };
 

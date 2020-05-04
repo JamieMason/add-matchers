@@ -6,7 +6,7 @@ addMatchers({
   toBeBetween: (a, b, value) => value >= a && value <= b,
   toHaveFoo: (key, value) => value[key] === 'foo',
   toHaveIncluding: (key, a, value) => value[key].includes(a),
-  toHaveBetween: (key, a, b, value) => value[key] >= a && value[key] <= b
+  toHaveBetween: (key, a, b, value) => value[key] >= a && value[key] <= b,
 });
 
 describe('add-matchers', () => {

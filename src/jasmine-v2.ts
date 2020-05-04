@@ -3,16 +3,13 @@ import { CustomMatcher } from '.';
 
 export type JasmineV2MatcherAdapter = (
   name: string,
-  matcher: CustomMatcher
+  matcher: CustomMatcher,
 ) => jasmine.CustomMatcherFactory;
 
-export const getJasmineV2Adapter = (scope: {
-  beforeEach: any;
-  jasmine: jasmine.Env;
-}) => {
+export const getJasmineV2Adapter = (scope: { beforeEach: any; jasmine: jasmine.Env }) => {
   const createToBeMatcher = (
     name: string,
-    matcher: CustomMatcher
+    matcher: CustomMatcher,
   ): jasmine.CustomMatcherFactory => {
     return (util) => {
       return {
@@ -22,16 +19,16 @@ export const getJasmineV2Adapter = (scope: {
           const passes = matcher(...realArgs, actual);
           return {
             message: util.buildFailureMessage(name, passes, actual, ...args),
-            pass: passes
+            pass: passes,
           };
-        }
+        },
       };
     };
   };
 
   const createToHaveMatcher = function forKeyAndActualAndTwoExpected(
     name: string,
-    matcher: CustomMatcher
+    matcher: CustomMatcher,
   ): jasmine.CustomMatcherFactory {
     return (util) => {
       return {
@@ -44,7 +41,7 @@ export const getJasmineV2Adapter = (scope: {
             .replace('Expected', `Expected member "${key}" of`)
             .replace(' to have ', ' to be ');
           return { message, pass: passes };
-        }
+        },
       };
     };
   };
