@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "packages/add-matchers/dist",
     "skipLibCheck": true,
     "strict": true,
     "target": "es3"
   },
-  "include": ["./src/**/*.ts"]
+  "include": ["packages/add-matchers/src/**/*.ts"]
 }

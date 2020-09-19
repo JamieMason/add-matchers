@@ -1,0 +1,11 @@
+{
+  "name": "add-matchers-jest-25.5.4",
+  "version": "25.5.4",
+  "devDependencies": {
+    "jest": "25.5.4"
+  },
+  "private": true,
+  "scripts": {
+    "test": "jest ./e2e.spec.js"
+  }
+}

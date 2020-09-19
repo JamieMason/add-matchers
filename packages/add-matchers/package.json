@@ -1,0 +1,20 @@
+{
+  "name": "add-matchers",
+  "description": "Write useful test matchers compatible with Jest and Jasmine.",
+  "version": "0.6.2",
+  "author": "Jamie Mason (https://github.com/JamieMason)",
+  "bugs": "https://github.com/JamieMason/add-matchers/issues",
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/JamieMason/add-matchers",
+  "keywords": [
+    "BDD",
+    "TDD",
+    "jasmine",
+    "testing"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": "JamieMason/add-matchers.git"
+}

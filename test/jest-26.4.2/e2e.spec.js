@@ -1,4 +1,4 @@
-const { addMatchers } = require('../dist');
+const { addMatchers } = require('add-matchers');
 
 addMatchers({
   toBeFoo: (value) => value === 'foo',
@@ -8,8 +8,7 @@ addMatchers({
   toHaveIncluding: (key, a, value) => value[key].includes(a),
   toHaveBetween: (key, a, b, value) => value[key] >= a && value[key] <= b,
 });
-
-describe('add-matchers', () => {
+describe('add-matchers-jest-26.4.2', () => {
   it('should register custom matchers', () => {
     expect('foo').toBeFoo();
     expect({ key: 'foo' }).toHaveFoo('key');

@@ -1,0 +1,11 @@
+{
+  "name": "add-matchers-jasmine-2.5.0",
+  "version": "2.5.0",
+  "devDependencies": {
+    "jasmine": "2.5.0"
+  },
+  "private": true,
+  "scripts": {
+    "test": "jasmine"
+  }
+}
